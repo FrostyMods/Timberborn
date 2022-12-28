@@ -75,6 +75,7 @@ MonoBehaviour:
   assetBundles:
   - assetBundleName: frost_theshamingwheel
     assets:
+    - {fileID: 102900000, guid: 0c6e4fdd7c6d06946a9ddc5524f2792d, type: 3}
     - {fileID: 9000000, guid: 2f84383d7ed2ecc448e3f8235919b2de, type: 2}
     - {fileID: 7400000, guid: 9281b7350e87d4043a91c574f8d288cc, type: 2}
     - {fileID: 9100000, guid: 5a5cda6aa19f6cd49b33cd41f33bd034, type: 2}
