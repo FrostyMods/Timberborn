@@ -22,7 +22,7 @@
 			"**/*.unityproj": true,
 			"**/*.dll": false,
 			"**/*.exe": true,
-			"**/*.asset": true,
+			"**/*.asset": false,
 			"**/*.mat": true,
 			"**/*.meta": true,
 			"**/*.prefab": true,
