@@ -1,6 +1,4 @@
 ID,Text,Comment
-Frost.TheShamingWheel.DisplayName,Shaming Wheel,-
-Frost.TheShamingWheel.Description,Generates power from the tears of shamed beavers,-
-Frost.TheShamingWheel.FlavorDescription,"""Shame. Shame. Shame."" — RCE",-
-
-
+Frost.ShamingWheel.DisplayName,Shaming Wheel,-
+Frost.ShamingWheel.Description,Generates power from the tears of shamed beavers,-
+Frost.ShamingWheel.FlavorDescription,"""Shame. Shame. Shame."" — RCE",-

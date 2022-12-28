@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &276390866470988386
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1459898639191000, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: m_Name
+      value: ShamingWheel.IronTeeth
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128275307971071, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128275307971071, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128275307971071, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128275307971071, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128275307971071, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128275307971071, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128275307971071, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128275307971071, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128275307971071, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128275307971071, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128275307971071, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114140759715788178, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: _disallowOtherWorkerTypes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114453144727182174, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: _descriptionLocKey
+      value: Frost.ShamingWheel.Description
+      objectReference: {fileID: 0}
+    - target: {fileID: 114453144727182174, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: _displayNameLocKey
+      value: Frost.ShamingWheel.DisplayName
+      objectReference: {fileID: 0}
+    - target: {fileID: 114453144727182174, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: _flavorDescriptionLocKey
+      value: Frost.ShamingWheel.FlavorDescription
+      objectReference: {fileID: 0}
+    - target: {fileID: 114626876304845729, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: _toolOrder
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 114649298912540614, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: _powerOutput
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114811098862267194, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: _prefabName
+      value: ShamingWheel.IronTeeth
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}

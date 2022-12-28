@@ -76,12 +76,15 @@ MonoBehaviour:
   - assetBundleName: shamingwheel
     assets:
     - {fileID: 102900000, guid: 0c6e4fdd7c6d06946a9ddc5524f2792d, type: 3}
-    - {fileID: 9000000, guid: 2f84383d7ed2ecc448e3f8235919b2de, type: 2}
-    - {fileID: 7400000, guid: 9281b7350e87d4043a91c574f8d288cc, type: 2}
-    - {fileID: 9100000, guid: 5a5cda6aa19f6cd49b33cd41f33bd034, type: 2}
-    - {fileID: 919132149155446097, guid: fa6b60c03e966cf4e8c1459560a93bdd, type: 3}
-    - {fileID: 919132149155446097, guid: 223493bbe9a24e846bd77c8bdfec4a85, type: 3}
-    - {fileID: 1772711155174400384, guid: 6ff89cc27c7e72c4390f246b0c114a06, type: 3}
+    - {fileID: 102900000, guid: 50b83721dbeffc64abc4200c39396fc4, type: 3}
+    - {fileID: 102900000, guid: 9b16771cb147f3c4a9fa961d62c393da, type: 3}
+    - {fileID: 102900000, guid: cd7e09453997ce645848766efb6cf2ff, type: 3}
+    - {fileID: 8300000, guid: 7c2e5d90f3f211941a5dba9acae03557, type: 3}
+    - {fileID: 8300000, guid: 30cb2a9e185332a4e9d473400fd5f022, type: 3}
+    - {fileID: 6650762083068184195, guid: 41db4eed89fe2a443bf93b89c738f8c1, type: 3}
+    - {fileID: 5381874250549708863, guid: d1218d228264e70468eb00e2371cff96, type: 3}
+    - {fileID: 5238240501309686309, guid: a47d5b639517f9340a6117c69ba8e647, type: 3}
+    - {fileID: 274965603547505082, guid: bd1d48fbd36da894f94c2908710cf287, type: 3}
 --- !u!114 &7276679206402820566
 MonoBehaviour:
   m_ObjectHideFlags: 0
