@@ -80,6 +80,18 @@ PrefabInstance:
       propertyPath: _flavorDescriptionLocKey
       value: Frost.ShamingWheel.FlavorDescription
       objectReference: {fileID: 0}
+    - target: {fileID: 114104316231078788, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _transputSpecifications.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114104316231078788, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _transputSpecifications.Array.data[0]._offset.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114104316231078788, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _transputSpecifications.Array.data[0]._direction3D
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 114223982455191708, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _disallowOtherWorkerTypes
       value: 0
