@@ -74,15 +74,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c4a43a9c007882f41ac2891ecd67f9bc, type: 3}
     - target: {fileID: 114018910634101418, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _descriptionLocKey
-      value: Frost.ShamingWheel.Description
+      value: Frost.ShamingWheel.Building.Description
       objectReference: {fileID: 0}
     - target: {fileID: 114018910634101418, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _displayNameLocKey
-      value: Frost.ShamingWheel.DisplayName
+      value: Frost.ShamingWheel.Building.DisplayName
       objectReference: {fileID: 0}
     - target: {fileID: 114018910634101418, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _flavorDescriptionLocKey
-      value: Frost.ShamingWheel.FlavorDescription
+      value: Frost.ShamingWheel.Building.FlavorDescription
       objectReference: {fileID: 0}
     - target: {fileID: 114104316231078788, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _transputSpecifications.Array.size
@@ -104,6 +104,14 @@ PrefabInstance:
       propertyPath: _toolOrder
       value: 113
       objectReference: {fileID: 0}
+    - target: {fileID: 114419348934002014, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _slotSpecifications.Array.data[0]._animation
+      value: ForcedWalking
+      objectReference: {fileID: 0}
+    - target: {fileID: 114419348934002014, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _slotSpecifications.Array.data[0]._slotKeyword
+      value: Walk
+      objectReference: {fileID: 0}
     - target: {fileID: 114474605036598705, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _powerOutput
       value: 90
@@ -115,3 +123,20 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+--- !u!1 &5238240501309686309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1641495937066797, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+  m_PrefabInstance: {fileID: 5238850839750796552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-9024902967942758363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5238240501309686309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75b3fd0f8579c7f4e9d29af2e4447d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

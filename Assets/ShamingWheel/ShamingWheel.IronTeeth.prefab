@@ -66,15 +66,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c4a43a9c007882f41ac2891ecd67f9bc, type: 3}
     - target: {fileID: 114453144727182174, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
       propertyPath: _descriptionLocKey
-      value: Frost.ShamingWheel.Description
+      value: Frost.ShamingWheel.Building.Description
       objectReference: {fileID: 0}
     - target: {fileID: 114453144727182174, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
       propertyPath: _displayNameLocKey
-      value: Frost.ShamingWheel.DisplayName
+      value: Frost.ShamingWheel.Building.DisplayName
       objectReference: {fileID: 0}
     - target: {fileID: 114453144727182174, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
       propertyPath: _flavorDescriptionLocKey
-      value: Frost.ShamingWheel.FlavorDescription
+      value: Frost.ShamingWheel.Building.FlavorDescription
       objectReference: {fileID: 0}
     - target: {fileID: 114626876304845729, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
       propertyPath: _toolOrder
