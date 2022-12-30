@@ -60,10 +60,14 @@ PrefabInstance:
       propertyPath: _disallowOtherWorkerTypes
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114222160808922414, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: _scienceCost
+      value: 69
+      objectReference: {fileID: 0}
     - target: {fileID: 114453144727182174, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
       propertyPath: _image
       value: 
-      objectReference: {fileID: 21300000, guid: c4a43a9c007882f41ac2891ecd67f9bc, type: 3}
+      objectReference: {fileID: 21300000, guid: 4d7e4fc54e4ec8c449d74e2237ed0ef7, type: 3}
     - target: {fileID: 114453144727182174, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
       propertyPath: _descriptionLocKey
       value: Frost.ShamingWheel.Building.Description
@@ -82,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114649298912540614, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
       propertyPath: _powerOutput
-      value: 90
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114811098862267194, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
       propertyPath: _prefabName
