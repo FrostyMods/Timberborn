@@ -1,10 +1,4 @@
 ID,Text,Comment
-Frost.ShamingWheel.Shame,Shame,-
-Frost.ShamingWheel.UI.StartShaming,Start Shaming,-
-Frost.ShamingWheel.UI.StopShaming,Stop Shaming,-
-
 Frost.ShamingWheel.Building.DisplayName,Shaming Wheel,-
 Frost.ShamingWheel.Building.Description,Generates power from the tears of shamed beavers,-
 Frost.ShamingWheel.Building.FlavorDescription,"""Shame. Shame. Shame."" — RCE",-
-
-Frost.ShamingWheel.Character.DeathMessage,died a shameful death,-
