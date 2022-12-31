@@ -12,7 +12,7 @@ namespace Frost.ShamingWheel
 
         public void Entry(IMod mod, IConsoleWriter consoleWriter)
         {
-            var harmony = new Harmony("io.frostkit.timborn.theshamingwheel");
+            var harmony = new Harmony("com.frostymods.timberborn.shamingwheel");
             harmony.PatchAll();
 
             Log = consoleWriter;

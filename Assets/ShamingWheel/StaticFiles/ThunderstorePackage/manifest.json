@@ -1,7 +1,7 @@
 {
   "name": "ShamingWheel",
   "version_number": "1.0.0",
-  "website_url": "https://github.com/sabrinafrost/TimberbornMods",
+  "website_url": "https://github.com/frostymods/timberborn",
   "description": "Shame. Shame. Shame.",
   "dependencies": [
     "BepInEx-BepInExPack_Timberborn-5.4.19",
