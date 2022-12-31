@@ -74,15 +74,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 4d7e4fc54e4ec8c449d74e2237ed0ef7, type: 3}
     - target: {fileID: 114018910634101418, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _descriptionLocKey
-      value: Frost.ShamingWheel.Building.Description
+      value: frostymods.shamingwheel.Building.Description
       objectReference: {fileID: 0}
     - target: {fileID: 114018910634101418, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _displayNameLocKey
-      value: Frost.ShamingWheel.Building.DisplayName
+      value: frostymods.shamingwheel.Building.DisplayName
       objectReference: {fileID: 0}
     - target: {fileID: 114018910634101418, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _flavorDescriptionLocKey
-      value: Frost.ShamingWheel.Building.FlavorDescription
+      value: frostymods.shamingwheel.Building.FlavorDescription
       objectReference: {fileID: 0}
     - target: {fileID: 114104316231078788, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _transputSpecifications.Array.size
@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114116472373421955, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _scienceCost
-      value: 69
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114223982455191708, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _disallowOtherWorkerTypes
