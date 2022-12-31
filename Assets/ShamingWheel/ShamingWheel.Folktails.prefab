@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: _scienceCost
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114116472373421955, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _soundBaseName
+      value: ShamingWheel
+      objectReference: {fileID: 0}
     - target: {fileID: 114223982455191708, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _disallowOtherWorkerTypes
       value: 0
