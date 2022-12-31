@@ -1,3 +1,5 @@
+**Note:** This was written to document the steps I took as I was piecing everything together, but I've found a much simple method using AssetRipper. This document will be updated in the near future and I don't recommend using it in the mean time. 
+
 ## Updating the original PowerWheel assets
 
 I'm documenting these steps for the inevitable event that the PowerWheel assets are updated and the Shaming Wheel needs to re-import them. If you're here because you're new to modding and just as lost as I was at first, welcome! But know that this guide is pretty specific and will likely become out-of-date very quickly.
