@@ -2,7 +2,7 @@ using HarmonyLib;
 using TimberApi.ConsoleSystem;
 using TimberApi.ModSystem;
 
-namespace Frost.ShamingWheel
+namespace FrostyMods.ShamingWheel
 {
     [HarmonyPatch]
     public class Plugin : IModEntrypoint

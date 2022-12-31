@@ -9,41 +9,71 @@ using TimberApi.ConfiguratorSystem;
 using TimberApi.SceneSystem;
 using Timberborn.SingletonSystem;
 
-namespace Frost.ShamingWheel
+namespace FrostyMods.ShamingWheel
 {
     /// <summary>
-    /// Adds our custom AudioClips to the AudioClipService by patching the ReloadSounds
-    /// method, loading the audio clips from our asset bundle, and injecting them into the
-    /// list of available AudioClips.
+    /// Adds our custom AudioClips to the AudioClipService by patching the ReloadSounds method.
+    /// It loads the audio clips from our asset bundle and adds them to the _audioClips field
+    /// after ReloadSounds returns.
     /// </summary>
     [HarmonyPatch]
     public class AudioClipServicePatch : ILoadableSingleton
     {
-        public static string Path = "frostymods.shamingwheel/shamingwheel";
-
         private static IAssetLoader _assetLoader;
 
+        /*
+         * This hopelessly typeless vagabond is the AudioClipService
+         * instance we get from our Postfix method. We need it for when
+         * we invoke the ReloadSounds method
+         */
         private static object _audioClipService;
-
+        
+        /*
+         * This feels a bit trashy, but it simplifies the logic surrounding
+         * when and when not to log errors. There's no point logging an error
+         * when the singleton isn't even ready. We'll just wait for it to
+         * call InvokeReloadSounds
+        */
         private static bool ready = false;
 
+        /*
+         * TimberApi injects the asset loader through this constructor.
+         * The ILoadableSingleton interface (along with the AudioClipServicePatchConfigurator
+         * class below) is required to actually make this work
+         */
         public AudioClipServicePatch(IAssetLoader assetLoader)
         {
             _assetLoader = assetLoader;
         }
 
+        /*
+         * AudioClipService is pretty much guaranteed to be called before
+         * the asset loader is initialized, so we wait for it to load and then
+         * we invoke the ReloadSounds method on our AudioClipService instance
+         */
         public void Load()
         {
             ready = true;
-            TriggerReload();
+            InvokeReloadSounds();
         }
 
+        /*
+         * AudioClipService is an internal class, so we have to
+         * tell it what to patch by using auxilary patch methods.
+         * https://harmony.pardeike.net/articles/patching-auxilary.html#targetmethod
+         */
         [HarmonyTargetMethod]
         public static MethodBase FindPrivateType()
         {
             return AccessTools.Method(AccessTools.TypeByName("Timberborn.SoundSystem.AudioClipService"), "ReloadSounds", (Type[])null, (Type[])null);
         }
 
+        /*
+         * The method we're targeting doesn't actually return anything.
+         * It loads AudioClips from a fixed directory and assigns them to
+         * the _audioClips field. This method is fired after ReloadSounds
+         * returns. It loads our custom clips and adds them to the _audioClips field
+         */
         [HarmonyPostfix]
         private static void Postfix(Dictionary<string, AudioClip> ____audioClips, object __instance)
         {
@@ -51,23 +81,19 @@ namespace Frost.ShamingWheel
 
             if (ready)
             {
-                try
+                foreach (var customClip in _assetLoader.LoadAll<AudioClip>("frostymods.shamingwheel/shamingwheel"))
                 {
-                    foreach (var customClip in _assetLoader.LoadAll<AudioClip>(Path))
-                    {
-                        ____audioClips.Add(customClip.name, customClip);
-                        Plugin.Log.LogInfo("Added " + customClip.name + " to the AudioClipService");
-                    }
-
-                }
-                catch (Exception e)
-                {
-                    Plugin.Log.LogWarning("Encountered an exception while loading the custom audio clips. Reason: " + e.Message);
+                    ____audioClips.Add(customClip.name, customClip);
+                    Plugin.Log.LogInfo("Added " + customClip.name + " to the AudioClipService");
                 }
             }
         }
 
-        public static void TriggerReload()
+        /*
+         * Invokes the AudioClipService.ReloadSounds method so our
+         * asset injection has more than just a fart's chance in a hurricane
+         */
+        public static void InvokeReloadSounds()
         {
             if (_audioClipService != null)
             {
@@ -78,6 +104,11 @@ namespace Frost.ShamingWheel
 
     }
 
+    /*
+     * Configurators let us bind classes to the dependency injection system
+     * Our patch will still run without this, but it won't do anything because
+     * the asset loader won't be given to us
+     */
     [Configurator(SceneEntrypoint.InGame)]
     public class AudioClipServicePatchConfigurator : IConfigurator
     {
