@@ -1,26 +1,21 @@
 ﻿using Bindito.Core;
 using TimberApi.ConfiguratorSystem;
 using TimberApi.SceneSystem;
-using FrostyMods.ShamingWheel.WorkerLinker;
 using Timberborn.EntityPanelSystem;
 using Timberborn.TemplateSystem;
-using Timberborn.WorkSystem;
-using Timberborn.Buildings;
 using TimberApi.EntityLinkerSystem;
 using FrostyMods.ShamingWheel.ShameableCharacters;
 
-namespace FrostyMods.ShamingWheel.WorkerLinker
+namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
 {
     [Configurator(SceneEntrypoint.InGame)]
-    public class ShamedWorkerLinkConfigurator : IConfigurator
+    public class ShameableCharacterPickerConfigurator : IConfigurator
     {
-        // Bind our custom classes
         public void Configure(IContainerDefinition containerDefinition)
         {
-//            containerDefinition.Bind<EntityLinkObjectSerializer>().AsSingleton();
-            containerDefinition.Bind<ShamedWorkerLinkerFragment>().AsSingleton();
-            containerDefinition.Bind<ShamedWorkerLinkViewFactory>().AsSingleton();
-            containerDefinition.Bind<ShamedWorkerLinkerButton>().AsSingleton();
+            containerDefinition.Bind<ShameableCharacterPickerFragment>().AsSingleton();
+            containerDefinition.Bind<ShameableCharacterPickerViewFactory>().AsSingleton();
+            containerDefinition.Bind<ShameableCharacterPickerButton>().AsSingleton();
 
             containerDefinition.MultiBind<EntityPanelModule>().ToProvider<EntityPanelModuleProvider>().AsSingleton();
             containerDefinition.MultiBind<TemplateModule>().ToProvider(ProvideTemplateModule).AsSingleton();
@@ -35,17 +30,17 @@ namespace FrostyMods.ShamingWheel.WorkerLinker
 
         private class EntityPanelModuleProvider : IProvider<EntityPanelModule>
         {
-            private readonly ShamedWorkerLinkerFragment _linkerFragment;
+            private readonly ShameableCharacterPickerFragment _pickerFragment;
 
-            public EntityPanelModuleProvider(ShamedWorkerLinkerFragment linkerFragment)
+            public EntityPanelModuleProvider(ShameableCharacterPickerFragment pickerFragment)
             {
-                _linkerFragment = linkerFragment;
+                _pickerFragment = pickerFragment;
             }
 
             public EntityPanelModule Get()
             {
                 EntityPanelModule.Builder builder = new EntityPanelModule.Builder();
-                builder.AddBottomFragment(_linkerFragment);
+                builder.AddTopFragment(_pickerFragment);
                 return builder.Build();
             }
         }

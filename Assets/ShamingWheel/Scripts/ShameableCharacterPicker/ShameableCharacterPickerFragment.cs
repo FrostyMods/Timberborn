@@ -16,9 +16,9 @@ using Timberborn.WorkSystem;
 using Timberborn.Characters;
 using FrostyMods.ShamingWheel.ShameableCharacters;
 
-namespace FrostyMods.ShamingWheel.WorkerLinker
+namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
 {
-    public class ShamedWorkerLinkerFragment : IEntityPanelFragment
+    public class ShameableCharacterPickerFragment : IEntityPanelFragment
     {
         protected readonly UIBuilder _builder;
         protected VisualElement _root;
@@ -29,9 +29,9 @@ namespace FrostyMods.ShamingWheel.WorkerLinker
 
         protected VisualElement _linksContainer;
 
-        protected ShamedWorkerLinkerButton _startLinkButton;
+        protected ShameableCharacterPickerButton _startLinkButton;
 
-        protected ShamedWorkerLinkViewFactory _entityLinkViewFactory;
+        protected ShameableCharacterPickerViewFactory _entityLinkViewFactory;
         protected readonly SelectionManager _selectionManager;
         protected readonly ILoc _loc;
 
@@ -39,10 +39,10 @@ namespace FrostyMods.ShamingWheel.WorkerLinker
 
         private Building _character;
 
-        public ShamedWorkerLinkerFragment(
+        public ShameableCharacterPickerFragment(
             UIBuilder builder,
-            ShamedWorkerLinkViewFactory entityLinkViewFactory,
-            ShamedWorkerLinkerButton startLinkButton,
+            ShameableCharacterPickerViewFactory entityLinkViewFactory,
+            ShameableCharacterPickerButton startLinkButton,
             SelectionManager selectionManager,
             ILoc loc)
         {

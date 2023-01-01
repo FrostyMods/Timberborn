@@ -8,12 +8,12 @@ using Timberborn.ToolSystem;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace FrostyMods.ShamingWheel.WorkerLinker
+namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
 {
     /// <summary>
     /// Defines the button that does the actual linking
     /// </summary>
-    public class ShamedWorkerLinkerButton
+    public class ShameableCharacterPickerButton
     {
         protected static readonly string PickShamedBeaverTooltipKey = "frostymods.shamingwheel.pickerbutton.tooltip";
         protected static readonly string PickShamedBeaverTitleKey = "frostymods.shamingwheel.pickerbutton.title";
@@ -25,7 +25,7 @@ namespace FrostyMods.ShamingWheel.WorkerLinker
         protected readonly ToolManager _toolManager;
         protected Button _button;
 
-        public ShamedWorkerLinkerButton(
+        public ShameableCharacterPickerButton(
             ILoc loc,
             PickObjectTool pickObjectTool,
             SelectionManager selectionManager,

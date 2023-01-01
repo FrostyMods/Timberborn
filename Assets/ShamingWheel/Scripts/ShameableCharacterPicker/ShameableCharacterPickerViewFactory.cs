@@ -3,16 +3,16 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using static UnityEngine.UIElements.LengthUnit;
 
-namespace FrostyMods.ShamingWheel.WorkerLinker
+namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
 {
     /// <summary>
     /// Factory for creating small UI views for existing Links
     /// </summary>
-    public class ShamedWorkerLinkViewFactory
+    public class ShameableCharacterPickerViewFactory
     {
         protected readonly UIBuilder _builder;
 
-        public ShamedWorkerLinkViewFactory(
+        public ShameableCharacterPickerViewFactory(
             UIBuilder builder)
         {
             _builder = builder;
