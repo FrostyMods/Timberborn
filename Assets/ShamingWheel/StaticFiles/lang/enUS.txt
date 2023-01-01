@@ -2,3 +2,6 @@ ID,Text,Comment
 frostymods.shamingwheel.Building.DisplayName,Shaming Wheel,-
 frostymods.shamingwheel.Building.Description,Generates power from the tears of shamed beavers,-
 frostymods.shamingwheel.Building.FlavorDescription,"""Shame. Shame. Shame."" — RCE",-
+frostymods.shamingwheel.pickerbutton,Pick a beaver,-
+frostymods.shamingwheel.pickerbutton.title
+frostymods.shamingwheel.pickerbutton.tooltip

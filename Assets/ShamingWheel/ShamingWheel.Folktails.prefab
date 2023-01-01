@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: _soundBaseName
       value: ShamingWheel
       objectReference: {fileID: 0}
+    - target: {fileID: 114208809771026661, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114223982455191708, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _disallowOtherWorkerTypes
       value: 0
