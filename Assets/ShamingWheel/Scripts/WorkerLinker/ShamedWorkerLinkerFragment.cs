@@ -14,6 +14,7 @@ using static UnityEngine.UIElements.LengthUnit;
 using Timberborn.PrefabSystem;
 using Timberborn.WorkSystem;
 using Timberborn.Characters;
+using FrostyMods.ShamingWheel.ShameableCharacters;
 
 namespace FrostyMods.ShamingWheel.WorkerLinker
 {
@@ -80,7 +81,7 @@ namespace FrostyMods.ShamingWheel.WorkerLinker
 
             _linksContainer = _root.Q<VisualElement>(LinkContainerName);
 
-            _startLinkButton.Initialize<Worker>(_root, () => _entityLinker, delegate
+            _startLinkButton.Initialize<ShameableCharacter>(_root, () => _entityLinker, delegate
             {
                 RemoveAllLinkViews();
             });
@@ -136,21 +137,22 @@ namespace FrostyMods.ShamingWheel.WorkerLinker
                 var linkeeGameObject = (linkee).gameObject;
 
                 var character = linkeeGameObject.GetComponent<Character>();
-                //var avatar = character.GetComponent<IEntityBadge>().GetEntityAvatar();
+                var avatar = character.GetComponent<IEntityBadge>().GetEntityAvatar();
 
                 var view = _entityLinkViewFactory.Create(_loc.T(character.FirstName));
-               // var view = _entityLinkViewFactory.Create(linkeeGameObject.);
 
                 var imageContainer = view.Q<VisualElement>("ImageContainer");
                 var img = new Image();
-                //img.sprite = avatar;
+                img.sprite = avatar;
                 imageContainer.Add(img);
 
                 var targetButton = view.Q<Button>("Target");
+                
                 targetButton.clicked += delegate
                 {
                     _selectionManager.FocusOn(linkeeGameObject);
                 };
+
                 view.Q<Button>("RemoveLinkButton").clicked += delegate
                 {
                     link.Linker.DeleteLink(link);

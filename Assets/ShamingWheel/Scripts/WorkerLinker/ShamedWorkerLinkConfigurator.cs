@@ -7,6 +7,7 @@ using Timberborn.TemplateSystem;
 using Timberborn.WorkSystem;
 using Timberborn.Buildings;
 using TimberApi.EntityLinkerSystem;
+using FrostyMods.ShamingWheel.ShameableCharacters;
 
 namespace FrostyMods.ShamingWheel.WorkerLinker
 {
@@ -28,7 +29,7 @@ namespace FrostyMods.ShamingWheel.WorkerLinker
         private static TemplateModule ProvideTemplateModule()
         {
             TemplateModule.Builder builder = new TemplateModule.Builder();
-            builder.AddDecorator<Worker, EntityLinker>();
+            builder.AddDecorator<ShameableCharacter, EntityLinker>();
             return builder.Build();
         }
 
