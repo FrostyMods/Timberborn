@@ -15,6 +15,7 @@ using Timberborn.PrefabSystem;
 using Timberborn.WorkSystem;
 using Timberborn.Characters;
 using FrostyMods.ShamingWheel.ShameableCharacters;
+using FrostyMods.ShamingWheel.ShamingPlace;
 
 namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
 {
@@ -37,7 +38,7 @@ namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
 
         private int _maxLinks = 1;
 
-        private Building _character;
+        private ShamingPlaceController _character;
 
         public ShameableCharacterPickerFragment(
             UIBuilder builder,
@@ -93,7 +94,7 @@ namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
         public virtual void ShowFragment(GameObject entity)
         {
             _entityLinker = entity.GetComponent<EntityLinker>();
-            _character = entity.GetComponent<Building>();
+            _character = entity.GetComponent<ShamingPlaceController>();
 
             if ((bool)_entityLinker && _character != null)
             {

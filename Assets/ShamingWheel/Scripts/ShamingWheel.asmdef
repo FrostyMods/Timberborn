@@ -40,10 +40,11 @@
         "Timberborn.SingletonSystem.dll",
         "Timberborn.AssetSystem.dll",
         "Timberborn.PrefabSystem.dll",
-        "Timberborn.PowerSystem.dll",
         "Timberborn.PowerGenerating.dll",
         "Timberborn.PowerGeneratingUI.dll",
-        "Timberborn.MechanicalSystem.dll"
+        "Timberborn.MechanicalSystem.dll",
+        "Timberborn.EnterableSystem.dll",
+        "Timberborn.SlotSystem.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
