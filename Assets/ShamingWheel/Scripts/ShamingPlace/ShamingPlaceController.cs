@@ -1,4 +1,5 @@
 using Bindito.Core.Internal;
+using FrostyMods.ShamingWheel.ShameableCharacterPicker;
 using FrostyMods.ShamingWheel.ShameableCharacters;
 using HarmonyLib;
 using System;
@@ -23,37 +24,12 @@ namespace FrostyMods.ShamingWheel.ShamingPlace
     {
         public event EventHandler RelationsChanged;
         private Enterable _enterable;
-        public EntityLinker _entityLinker
-        {
-            get
-            {
-                return GetComponent<EntityLinker>();
-            }
-        }
 
-        public ReadOnlyCollection<EntityLinker> _entityLinks {
-            get
-            {
-                return _entityLinker.entityLinks;
-            }
-        }
+        public ShameableCharacterPickerFragment _pickerFragment;
 
-
-        public IEnumerable<GameObject> GetRelations()
-        {
-            var list = Enumerable.Empty<GameObject>();
-            IReadOnlyCollection<EntityLink> links = GetComponent<EntityLinker>()?.EntityLinks;
-            
-            if (links != null && links.Count > 0) {
-                list.AddItem(links.First().Linkee.gameObject);
-            }
-            
-            return list;
-        }
 
         public void Awake()
         {
-            _enterable = ((Component)this).GetComponent<Enterable>();
         }
 
         public void OnEnterFinishedState()
@@ -69,29 +45,43 @@ namespace FrostyMods.ShamingWheel.ShamingPlace
         // Start is called before the first frame update
         void Start()
         {
+            _enterable = ((Component)this).GetComponent<Enterable>();
+            _pickerFragment = ((Component)this).GetComponent<ShameableCharacterPickerFragment>();
 
-            
+
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (_enterable != null && GetRelations().Count() > 0)
+            /*if (_enterable == null)
             {
-                var shamedBeaver = GetRelations().First();
-
-                if (shamedBeaver != null)
-                {
-                    Enterer character = shamedBeaver.GetComponent<Enterer>();
-                    character?.Enter(_enterable);
-                }
-            } else
-            {
-                Plugin.Log.LogWarning("No beavers to shame");
+                Plugin.Log.LogWarning("Not enterable");
+                return;
             }
-            
 
+            if (_pickerFragment == null)
+            {
+                Plugin.Log.LogWarning("No picker fragment");
+                return;
+            }
 
+            if (_pickerFragment.Links.Count == 0)
+            {
+                Plugin.Log.LogWarning("No linked beavers or bots");
+                return;
+            }
+
+            var link = _pickerFragment.Links.FirstOrDefault();
+
+            if (link != null) { }
+                var linkee = link.Linker == _pickerFragment.Linker
+                        ? link.Linkee
+                        : link.Linker;
+
+                Enterer character = linkee.GetComponent<Enterer>();
+                character?.Enter(_enterable);
+            }*/
         }
     }
-}
+    }

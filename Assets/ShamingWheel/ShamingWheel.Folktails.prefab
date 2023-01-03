@@ -101,8 +101,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114116472373421955, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _placeFinished
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114116472373421955, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _soundBaseName
       value: ShamingWheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 114116472373421955, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _buildingCost.Array.data[0]._amount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114208809771026661, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: m_Enabled
@@ -140,15 +148,7 @@ PrefabInstance:
       propertyPath: _prefabName
       value: ShamingWheel.Folktails
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114223982455191708, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
-    - {fileID: 114615547780722142, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
-    - {fileID: 114224507433253456, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
-    - {fileID: 114474605036598705, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
-    - {fileID: 114104316231078788, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
-    - {fileID: 114024428209011400, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
-    - {fileID: 114589877917346036, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
-    - {fileID: 114208809771026661, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
 --- !u!1 &5238240501309686309 stripped
@@ -156,18 +156,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1641495937066797, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
   m_PrefabInstance: {fileID: 5238850839750796552}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-8788867531585895439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5238240501309686309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1066712947, guid: dd1baa4f323651ee41781eb84b2b1960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-2764532165952189228
 MonoBehaviour:
   m_ObjectHideFlags: 0

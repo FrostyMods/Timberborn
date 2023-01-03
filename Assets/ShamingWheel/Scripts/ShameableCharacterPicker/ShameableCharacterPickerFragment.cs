@@ -23,7 +23,9 @@ namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
     {
         protected readonly UIBuilder _builder;
         protected VisualElement _root;
-        protected EntityLinker _entityLinker;
+        public EntityLinker Linker;
+        public ReadOnlyCollection<EntityLink> Links => (ReadOnlyCollection<EntityLink>)Linker.EntityLinks;
+
 
         protected static string LinkContainerName = "LinkContainer";
         protected static string NewLinkButtonName = "NewLinkButton";
@@ -82,7 +84,7 @@ namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
 
             _linksContainer = _root.Q<VisualElement>(LinkContainerName);
 
-            _startLinkButton.Initialize<ShameableCharacter>(_root, () => _entityLinker, delegate
+            _startLinkButton.Initialize<ShameableCharacter>(_root, () => Linker, delegate
             {
                 RemoveAllLinkViews();
             });
@@ -93,10 +95,10 @@ namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
 
         public virtual void ShowFragment(GameObject entity)
         {
-            _entityLinker = entity.GetComponent<EntityLinker>();
+            Linker = entity.GetComponent<EntityLinker>();
             _character = entity.GetComponent<ShamingPlaceController>();
 
-            if ((bool)_entityLinker && _character != null)
+            if ((bool)Linker && _character != null)
             {
                 AddAllLinkViews();
             }
@@ -104,14 +106,14 @@ namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
 
         public virtual void ClearFragment()
         {
-            _entityLinker = null;
+            Linker = null;
             _root.ToggleDisplayStyle(false);
             RemoveAllLinkViews();
         }
 
         public virtual void UpdateFragment()
         {
-            if (_entityLinker != null && _character != null)
+            if (Linker != null && _character != null)
             {
                 _root.ToggleDisplayStyle(true);
             }
@@ -126,18 +128,37 @@ namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
         /// </summary>
         public virtual void AddAllLinkViews()
         {
-            ReadOnlyCollection<EntityLink> links = (ReadOnlyCollection<EntityLink>)_entityLinker.EntityLinks;
-            for (int i = 0; i < links.Count; i++)
+            for (int i = 0; i < Links.Count; i++)
             {
-                var link = links[i];
+                var link = Links[i];
 
-                var linkee = link.Linker == _entityLinker
+                var linkee = link.Linker == Linker
                     ? link.Linkee
                     : link.Linker;
 
                 var linkeeGameObject = (linkee).gameObject;
 
                 var character = linkeeGameObject.GetComponent<Character>();
+                var worker = linkeeGameObject.GetComponent<Worker>();
+                var workplace = Linker.gameObject.GetComponent<Workplace>();
+
+                if (workplace != null)
+                {
+                    if (!workplace.AssignedWorkers.Contains(worker))
+                    {
+                        var assignedWorkers = workplace.AssignedWorkers;
+                        workplace.UnassignAllWorkers();
+                        foreach (var assignedWorker in assignedWorkers)
+                        {
+                           assignedWorker.Unemploy();
+                         }
+
+                        worker.EmployAt(workplace);
+                        workplace.AssignWorker(worker);
+
+                    }
+                }
+
                 var avatar = character.GetComponent<IEntityBadge>().GetEntityAvatar();
 
                 var view = _entityLinkViewFactory.Create(_loc.T(character.FirstName));
@@ -163,7 +184,7 @@ namespace FrostyMods.ShamingWheel.ShameableCharacterPicker
                 _linksContainer.Add(view);
             }
 
-            _startLinkButton.UpdateRemainingSlots(links.Count, _maxLinks);
+            _startLinkButton.UpdateRemainingSlots(Links.Count, _maxLinks);
         }
 
         /// <summary>
