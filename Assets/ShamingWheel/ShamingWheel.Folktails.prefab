@@ -101,12 +101,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114116472373421955, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _placeFinished
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114116472373421955, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _soundBaseName
       value: ShamingWheel
       objectReference: {fileID: 0}
+    - target: {fileID: 114116472373421955, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _buildingCost.Array.data[0]._amount
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114223982455191708, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _defaultWorkerType
+      value: ShamedWorker
+      objectReference: {fileID: 0}
     - target: {fileID: 114223982455191708, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _disallowOtherWorkerTypes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114223982455191708, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _workerTypeUnlockCosts.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114223982455191708, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _workerTypeUnlockCosts.Array.data[0]._workerType
+      value: ShamedWorker
       objectReference: {fileID: 0}
     - target: {fileID: 114416133198588046, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _toolOrder
@@ -127,6 +147,14 @@ PrefabInstance:
     - target: {fileID: 114727116214731896, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _prefabName
       value: ShamingWheel.Folktails
+      objectReference: {fileID: 0}
+    - target: {fileID: 114727116214731896, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _backwardCompatiblePrefabNames.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114727116214731896, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _backwardCompatiblePrefabNames.Array.data[0]
+      value: PowerWheel.Folktails
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

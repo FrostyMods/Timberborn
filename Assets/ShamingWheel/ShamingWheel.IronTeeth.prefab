@@ -57,8 +57,12 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 114140759715788178, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: _defaultWorkerType
+      value: ShamedWorker
+      objectReference: {fileID: 0}
+    - target: {fileID: 114140759715788178, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
       propertyPath: _disallowOtherWorkerTypes
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114222160808922414, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
       propertyPath: _scienceCost
@@ -95,6 +99,14 @@ PrefabInstance:
     - target: {fileID: 114811098862267194, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
       propertyPath: _prefabName
       value: ShamingWheel.IronTeeth
+      objectReference: {fileID: 0}
+    - target: {fileID: 114811098862267194, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: _backwardCompatiblePrefabNames.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114811098862267194, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: _backwardCompatiblePrefabNames.Array.data[0]
+      value: PowerWheel.IronTeeth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

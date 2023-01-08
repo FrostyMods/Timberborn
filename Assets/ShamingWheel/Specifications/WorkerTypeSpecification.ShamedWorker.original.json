@@ -1,0 +1,7 @@
+﻿{
+  "Id": "ShamedWorker",
+  "BackwardCompatibleIds": [],
+  "DisplayNameLocKey": "frostymods.shamingwheel.WorkerType.PluralDisplayName",
+  "WorkerOnlyTextLocKey": "frostymods.shamingwheel.WorkerType.Only",
+  "IgnoresWorkingHours": false
+}

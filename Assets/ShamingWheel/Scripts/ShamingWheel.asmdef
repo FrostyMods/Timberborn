@@ -1,7 +1,9 @@
 {
     "name": "ShamingWheel",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:6b346810edaeccb4da40c207a63c3e85"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
@@ -9,11 +11,17 @@
     "precompiledReferences": [
         "BepInEx.dll",
         "Bindito.Core.dll",
+        "Bindito.Unity.dll",
         "0Harmony.dll",
         "TimberApi.dll",
         "TimberApi.Core.dll",
         "TimberApi.Common.dll",
         "Timberborn.Buildings.dll",
+        "Timberborn.Beavers.dll",
+        "Timberborn.FactionSystemGame.dll",
+        "Timberborn.MasterScene.dll",
+        "Timberborn.EntitySystem.dll",
+        "Timberborn.FactionSystem.dll",
         "Timberborn.CoreUI.dll",
         "Timberborn.Debugging.dll",
         "Timberborn.EntityPanelSystem.dll",
@@ -30,7 +38,15 @@
         "Timberborn.SoundSystem.dll",
         "Timberborn.SingletonSystem.dll",
         "Timberborn.AssetSystem.dll",
-        "Timberborn.PrefabSystem.dll"
+        "Timberborn.PrefabSystem.dll",
+        "Timberborn.Common.dll",
+        "Timberborn.TickSystem.dll",
+        "Timberborn.WorkSystem.dll",
+        "Timberborn.NotificationSystem.dll",
+        "Timberborn.SelectionSystem.dll",
+        "Timberborn.TimeSystem.dll",
+        "Timberborn.LifeSystem.dll",
+        "System.Collections.Immutable.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
