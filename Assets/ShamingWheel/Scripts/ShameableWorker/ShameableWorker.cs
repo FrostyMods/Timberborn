@@ -3,6 +3,7 @@ using UnityEngine;
 using Timberborn.WorkSystem;
 using Timberborn.Persistence;
 using Timberborn.GameDistricts;
+using Timberborn.BeaversUI;
 using static FrostyMods.ShamingWheel.Constants;
 
 namespace FrostyMods.ShamingWheel {
@@ -53,7 +54,11 @@ namespace FrostyMods.ShamingWheel {
             }
         }
 
-        public void StartShaming() => SetWorkerType(ShamedWorkerType);
+        public void StartShaming() {
+            SetWorkerType(ShamedWorkerType);
+            var beaverSelectionSound = GetComponent<BeaverSelectionSound>();
+            beaverSelectionSound?.OnSelect();
+        }
 
         public void StopShaming() => SetWorkerType(_originalWorkerType);
 
