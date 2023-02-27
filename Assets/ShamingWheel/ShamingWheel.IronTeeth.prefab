@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: _soundBaseName
       value: ShamingWheel
       objectReference: {fileID: 0}
+    - target: {fileID: 114222160808922414, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
+      propertyPath: _hasLoopingSound
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114453144727182174, guid: 550fffa378a5ce34d90feb6ebb5747b7, type: 3}
       propertyPath: _image
       value: 

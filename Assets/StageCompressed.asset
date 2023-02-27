@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3695521163bdd74fa2845bbd3438240, type: 3}
-  m_Name: Stage
+  m_Name: StageCompressed
   m_EditorClassIdentifier: 
   Data:
   - {fileID: 114537630434205182}
@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 114643622350610336}
   - {fileID: 114520525572577756}
   QuickAccess: 0
-  manifest: {fileID: 11400000, guid: 66f0f11f6a8f0bb4797e7dd77d3850fc, type: 2}
+  manifest: {fileID: 0}
 --- !u!114 &114366308522735304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: StageAssetBundles
   m_EditorClassIdentifier: 
   Active: 1
-  AssetBundleBuildOptions: 1
+  AssetBundleBuildOptions: 0
   buildTarget: 5
   recurseDirectories: 1
   simulate: 0
