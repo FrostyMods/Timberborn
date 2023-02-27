@@ -109,6 +109,10 @@ PrefabInstance:
       value: ShamingWheel
       objectReference: {fileID: 0}
     - target: {fileID: 114116472373421955, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
+      propertyPath: _hasLoopingSound
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114116472373421955, guid: 386999fa488a00849b24f1ee56387d64, type: 3}
       propertyPath: _buildingCost.Array.data[0]._amount
       value: 40
       objectReference: {fileID: 0}
