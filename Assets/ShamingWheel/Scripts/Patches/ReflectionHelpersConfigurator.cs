@@ -1,5 +1,5 @@
 ﻿using Bindito.Core;
-using FrostyMods.Core;
+using FrostyMods.Common;
 using TimberApi.ConfiguratorSystem;
 using TimberApi.SceneSystem;
 

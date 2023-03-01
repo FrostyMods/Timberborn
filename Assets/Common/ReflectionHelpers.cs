@@ -8,7 +8,7 @@ using Timberborn.Common;
  * https://github.com/TobbyTheBobby/TimberbornModsUnity/blob/master/Assets/ChooChoo/Scripts/Core/ChooChooCore.cs
  */
 
-namespace FrostyMods.Core
+namespace FrostyMods.Common
 {
     public class ReflectionHelpers
     {

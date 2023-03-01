@@ -1,5 +1,5 @@
 using Bindito.Core;
-using FrostyMods.Core;
+using FrostyMods.Common;
 using Timberborn.BeaversUI;
 using Timberborn.GameDistricts;
 using Timberborn.Persistence;
