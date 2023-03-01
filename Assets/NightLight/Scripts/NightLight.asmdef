@@ -1,0 +1,27 @@
+{
+    "name": "NightLight",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "BepInEx.dll",
+        "Bindito.Core.dll",
+        "Bindito.Unity.dll",
+        "0Harmony.dll",
+        "TimberApi.dll",
+        "TimberApi.Core.dll",
+        "TimberApi.Common.dll",
+        "Timberborn.TimeSystem.dll",
+        "System.Collections.Immutable.dll",
+        "Timberborn.SkySystem.dll",
+        "Timberborn.SingletonSystem.dll",
+        "Timberborn.GameUI.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
