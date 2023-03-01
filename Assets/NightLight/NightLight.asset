@@ -17,7 +17,7 @@ MonoBehaviour:
   Author: Frost
   Name: NightLight
   Description: Sleepin' with the lights on!
-  Version: 1.0.0
+  Version: 0.1.0
   Dependencies: []
 --- !u!114 &-1800585617083543040
 MonoBehaviour:
