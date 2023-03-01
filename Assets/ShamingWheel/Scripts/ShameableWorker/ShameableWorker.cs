@@ -1,4 +1,5 @@
 using Bindito.Core;
+using FrostyMods.Core;
 using Timberborn.BeaversUI;
 using Timberborn.GameDistricts;
 using Timberborn.Persistence;
@@ -16,7 +17,7 @@ namespace FrostyMods.ShamingWheel
         private string _originalWorkerType;
         private static readonly PropertyKey<string> OriginalWorkerTypeKey = new("OriginalWorkerType");
 
-        private Helpers _helperService;
+        private ReflectionHelpers _helperService;
         private Worker _worker;
         private Citizen _citizen;
         private DistrictCenter _district;
@@ -24,7 +25,7 @@ namespace FrostyMods.ShamingWheel
         public bool IsShamed => _worker.WorkerType.ToString() == ShamedWorkerType;
 
         [Inject]
-        public void InjectDependencies(Helpers helperService)
+        public void InjectDependencies(ReflectionHelpers helperService)
         {
             _helperService = helperService;
         }

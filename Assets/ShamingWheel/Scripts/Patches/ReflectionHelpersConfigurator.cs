@@ -1,4 +1,5 @@
 ﻿using Bindito.Core;
+using FrostyMods.Core;
 using TimberApi.ConfiguratorSystem;
 using TimberApi.SceneSystem;
 
@@ -14,7 +15,7 @@ namespace FrostyMods.ShamingWheel
     {
         public void Configure(IContainerDefinition containerDefinition)
         {
-            containerDefinition.Bind<Helpers>().AsSingleton();
+            containerDefinition.Bind<ReflectionHelpers>().AsSingleton();
         }
     }
 }
