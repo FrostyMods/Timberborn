@@ -1,16 +1,16 @@
 {
-    "Name": "NightLight",
-    "Version": "0.1.0",
-    "UniqueId": "frostymods.nightlight",
-    "MinimumApiVersion": "0.5.0",
-    "MinimumGameVersion": "0.2.9.1",
-    "EntryDll": "NightLight.dll",
-    "Assets": [
-      {
-        "Prefix": "frostymods.nightlight",
-        "Scenes": [
-          "InGame"
-        ]
-      }
-    ]
-  }
+  "Name": "NightLight",
+  "Version": "0.1.0",
+  "UniqueId": "frostymods.nightlight",
+  "MinimumApiVersion": "0.5.0",
+  "MinimumGameVersion": "0.2.9.1",
+  "EntryDll": "NightLight.dll",
+  "Assets": [
+    {
+      "Prefix": "frostymods.nightlight",
+      "Scenes": [
+        "InGame"
+      ]
+    }
+  ]
+}

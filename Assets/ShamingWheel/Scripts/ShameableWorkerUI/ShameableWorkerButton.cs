@@ -1,13 +1,15 @@
-using UnityEngine;
-using UnityEngine.UIElements;
 using Timberborn.CoreUI;
 using Timberborn.Debugging;
 using Timberborn.EntityPanelSystem;
 using Timberborn.InputSystem;
 using Timberborn.Localization;
+using UnityEngine;
+using UnityEngine.UIElements;
 
-namespace FrostyMods.ShamingWheel {
-    public class ShameButtonFragment : IEntityPanelFragment {
+namespace FrostyMods.ShamingWheel
+{
+    public class ShameButtonFragment : IEntityPanelFragment
+    {
         private static readonly string ShameLocKey = "frostymods.shamingwheel.Worker.StartShaming";
         private static readonly string StopShamingLocKey = "frostymods.shamingwheel.Worker.StopShaming";
 
@@ -18,12 +20,14 @@ namespace FrostyMods.ShamingWheel {
         private Button _button;
         private ShameableWorker _worker;
 
-        public ShameButtonFragment(VisualElementLoader visualElementLoader, ILoc loc, DevModeManager devModeManager, InputService inputService) {
+        public ShameButtonFragment(VisualElementLoader visualElementLoader, ILoc loc, DevModeManager devModeManager, InputService inputService)
+        {
             _visualElementLoader = visualElementLoader;
             _loc = loc;
         }
 
-        public VisualElement InitializeFragment() {
+        public VisualElement InitializeFragment()
+        {
             _root = _visualElementLoader.LoadVisualElement("Master/EntityPanel/DynamiteFragment");
             _button = _root.Q<Button>("Button");
             _button.clicked += ToggleCharacterShame;
@@ -33,28 +37,34 @@ namespace FrostyMods.ShamingWheel {
             return _root;
         }
 
-        public void ShowFragment(GameObject entity) {
+        public void ShowFragment(GameObject entity)
+        {
             _worker = entity.GetComponent<ShameableWorker>();
         }
 
-        public void UpdateFragment() {
+        public void UpdateFragment()
+        {
             _root.ToggleDisplayStyle(visible: _worker != null);
 
-            if (_worker != null) {
+            if (_worker != null)
+            {
                 UpdateButton(_worker.IsShamed);
             }
         }
 
-        public void ClearFragment() {
+        public void ClearFragment()
+        {
             _root.ToggleDisplayStyle(visible: false);
             _worker = null;
         }
 
-        private void UpdateButton(bool isShamed) {
+        private void UpdateButton(bool isShamed)
+        {
             _button.text = _loc.T(isShamed ? StopShamingLocKey : ShameLocKey);
         }
 
-        private void ToggleCharacterShame() {
+        private void ToggleCharacterShame()
+        {
             _worker?.ToggleShame();
         }
     }

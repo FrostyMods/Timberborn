@@ -1,7 +1,8 @@
 {
 	"folders": [
 		{ "path": ".", "name": "All Files" },
-		{ "path": "./Assets/TheShamingWheel", "name": "The Shaming Wheel" },
+		{ "path": "./Assets/ShamingWheel", "name": "Shaming Wheel" },
+		{ "path": "./Assets/NightLight", "name": "Night Light" },
 		{ "path": "./ThunderKit/Staging", "name": "Staging" },
 	],
 	"settings": {
@@ -40,6 +41,9 @@
 			"temp/": true,
 			"Temp/": true
 		},
-		"explorerExclude.backup": {}
+		"explorerExclude.backup": {},
+		"omnisharp.organizeImportsOnFormat": true,
+		"omnisharp.loggingLevel": "information",
+		"editor.formatOnSave": true
 	}
 }

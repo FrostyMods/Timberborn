@@ -1,13 +1,13 @@
-﻿using HarmonyLib;
-using System.Reflection;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
-using TimberApi.AssetSystem;
+using System.Reflection;
 using Bindito.Core;
+using HarmonyLib;
+using TimberApi.AssetSystem;
 using TimberApi.ConfiguratorSystem;
 using TimberApi.SceneSystem;
 using Timberborn.SingletonSystem;
+using UnityEngine;
 
 namespace FrostyMods.ShamingWheel
 {
@@ -27,7 +27,7 @@ namespace FrostyMods.ShamingWheel
          * we invoke the ReloadSounds method
          */
         private static object _audioClipService;
-        
+
         /*
          * This feels a bit trashy, but it simplifies the logic surrounding
          * when and when not to log errors. There's no point logging an error
