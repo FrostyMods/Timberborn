@@ -1,45 +1,51 @@
 {
 	"folders": [
-		{ "path": ".", "name": "All Files" },
-		{ "path": "./Assets/TheShamingWheel", "name": "The Shaming Wheel" },
-		{ "path": "./ThunderKit/Staging", "name": "Staging" },
+		{
+			"path": ".",
+			"name": "All Files"
+		},
+		{
+			"path": "./Assets/ShamingWheel",
+			"name": "Shaming Wheel"
+		},
+		{
+			"path": "./Assets/NightLight",
+			"name": "Night Light"
+		},
+		{
+			"path": "./ThunderKit/Staging",
+			"name": "Staging"
+		},
 	],
 	"settings": {
-		"files.exclude":
-		{
-			"**/.git": false,
-			"**/.svn": true,
-			"**/.hg": true,
-			"**/CVS": true,
-			"**/.DS_Store": true,
-			"**/Thumbs.db": true,
-			"**/.git*": false,
-			"**/*.booproj": true,
-			"**/*.pidb": true,
-			"**/*.suo": true,
-			"**/*.user": true,
-			"**/*.userprefs": true,
-			"**/*.unityproj": true,
-			"**/*.dll": false,
-			"**/*.exe": true,
+		"files.exclude": {
+			"**/.*": true,
 			"**/*.asset": false,
+			"**/*.csproj": true,
 			"**/*.mat": true,
 			"**/*.meta": true,
 			"**/*.prefab": true,
+			"**/*.sln": true,
 			"**/*.unity": true,
-			"build/": true,
-			"Build/": true,
-			"Library/": true,
-			"library/": true,
-			"obj/": true,
-			"Obj/": true,
+			"Assets/*.asset": true,
+			"Assets/ThunderKitSettings": true,
+			"Library": true,
 			"Logs": true,
-			"ProjectSettings/": true,
-			"UserSettings/": true,
-			"Packages/": true,
-			"temp/": true,
-			"Temp/": true
+			"obj": true,
+			"Packages": true,
+			"ProjectSettings": true,
+			"UserSettings": true,
+			"Temp": true,
 		},
-		"explorerExclude.backup": {}
+		"explorerExclude.backup": {},
+		"omnisharp.organizeImportsOnFormat": true,
+		"omnisharp.loggingLevel": "information",
+		"editor.formatOnSave": true
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-dotnettools.csharp",
+			"kishoreithadi.dotnet-core-essentials"
+		]
 	}
 }

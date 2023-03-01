@@ -8,9 +8,9 @@
 */
 
 #if UNITY_EDITOR
-using UnityEngine;
-using UnityEditor;
 using System.Collections;
+using UnityEditor;
+using UnityEngine;
 
 public class ComponentsCopier
 {

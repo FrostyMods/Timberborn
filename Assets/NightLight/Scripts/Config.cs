@@ -1,9 +1,11 @@
 ﻿using System;
-using TimberApi.ConfigSystem;
 using FrostyMods.NightLight;
+using TimberApi.ConfigSystem;
 
-namespace FrostMods.NightLight {
-    public class NightLightConfig : IConfig {
+namespace FrostMods.NightLight
+{
+    public class NightLightConfig : IConfig
+    {
         public string ConfigFileName => "LightingConfig";
 
         public DayStage Sunrise { get; set; }
@@ -11,15 +13,18 @@ namespace FrostMods.NightLight {
         public DayStage Sunset { get; set; }
         public DayStage Night { get; set; }
 
-        public NightLightConfig() {
+        public NightLightConfig()
+        {
             Sunrise = DayStage.Sunrise;
             Day = DayStage.Day;
             Sunset = DayStage.Sunset;
             Night = DayStage.Sunset;
         }
 
-        public DayStage GetMappedDayStage(DayStage dayStage) {
-            return dayStage switch {
+        public DayStage GetMappedDayStage(DayStage dayStage)
+        {
+            return dayStage switch
+            {
                 DayStage.Sunrise => Sunrise,
                 DayStage.Day => Day,
                 DayStage.Sunset => Sunrise,

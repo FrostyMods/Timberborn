@@ -2,7 +2,8 @@ using HarmonyLib;
 using Timberborn.BeaversUI;
 using UnityEngine;
 
-namespace FrostyMods.ShamingWheel {
+namespace FrostyMods.ShamingWheel
+{
 
     /// <summary>
     /// Patch BeaverSelectionSound so shamed beavers always sound sad.
