@@ -1,40 +1,25 @@
 ﻿using HarmonyLib;
 using System;
 using System.Reflection;
-using Timberborn.SingletonSystem;
 
-namespace FrostyMods.NightLight
-{
-    // Easier to just redefine this enum,
-    // since the original is internal and basic
-    public enum DayStage
-    {
-        Sunrise,
-        Day,
-        Sunset,
-        Night
-    }
-
+namespace FrostyMods.NightLight {
     [HarmonyPatch]
-    public class DayStagePatch : ILoadableSingleton
-    {
-        public void Load() {}
-
+    public class DayStageColorsPatch {
         [HarmonyTargetMethod]
-        public static MethodBase FindPrivateType()
-        {
+        public static MethodBase FindPrivateType() {
             return AccessTools.Method(AccessTools.TypeByName("Timberborn.SkySystem.Sun"), "DayStageColors", (Type[])null, (Type[])null);
         }
 
         [HarmonyPostfix]
-        public static bool Prefix(DayStage dayStage, ref object __result, ref object ____sunriseColors, ref object ____dayColors, ref object ____sunsetColors, ref object ____nightColors)
-        {
-            __result = dayStage switch
+        public static bool Prefix(DayStage dayStage, ref object __result, ref object ____sunriseColors, ref object ____dayColors, ref object ____sunsetColors, ref object ____nightColors) {
+            // Grab the preferred DayStage from the config file and use it for the switch instead.
+            // e.g. if the user has set Night to be Day, then we return the day colours
+            __result = Plugin.Config.GetMappedDayStage(dayStage) switch
             {
-                DayStage.Sunrise => ____sunsetColors, //___sunriseColors,
-                DayStage.Day => ____sunsetColors, //___dayColors,
-                DayStage.Sunset => ____sunsetColors,
-                DayStage.Night => ____sunsetColors, //___nightColors,
+                DayStage.Sunrise => ____sunriseColors,
+                DayStage.Day => ____dayColors,
+                DayStage.Sunset => ____sunriseColors,
+                DayStage.Night => ____nightColors,
                 _ => throw new ArgumentOutOfRangeException("dayStage", dayStage, null),
             };
 
