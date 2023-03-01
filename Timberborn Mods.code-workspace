@@ -1,13 +1,24 @@
 {
 	"folders": [
-		{ "path": ".", "name": "All Files" },
-		{ "path": "./Assets/ShamingWheel", "name": "Shaming Wheel" },
-		{ "path": "./Assets/NightLight", "name": "Night Light" },
-		{ "path": "./ThunderKit/Staging", "name": "Staging" },
+		{
+			"path": ".",
+			"name": "All Files"
+		},
+		{
+			"path": "./Assets/ShamingWheel",
+			"name": "Shaming Wheel"
+		},
+		{
+			"path": "./Assets/NightLight",
+			"name": "Night Light"
+		},
+		{
+			"path": "./ThunderKit/Staging",
+			"name": "Staging"
+		},
 	],
 	"settings": {
-		"files.exclude":
-		{
+		"files.exclude": {
 			"**/.git": false,
 			"**/.svn": true,
 			"**/.hg": true,
@@ -28,6 +39,9 @@
 			"**/*.meta": true,
 			"**/*.prefab": true,
 			"**/*.unity": true,
+			"**/*.csproj": true,
+			"**/*.sln": true,
+			"Assets/*.asset": true,
 			"build/": true,
 			"Build/": true,
 			"Library/": true,
@@ -39,7 +53,9 @@
 			"UserSettings/": true,
 			"Packages/": true,
 			"temp/": true,
-			"Temp/": true
+			"Temp/": true,
+			"ThunderKitSettings": true,
+			"Assets/ThunderKitSettings": true
 		},
 		"explorerExclude.backup": {},
 		"omnisharp.organizeImportsOnFormat": true,
