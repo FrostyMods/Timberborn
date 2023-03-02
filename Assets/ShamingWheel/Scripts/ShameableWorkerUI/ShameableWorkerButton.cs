@@ -1,7 +1,5 @@
 using Timberborn.CoreUI;
-using Timberborn.Debugging;
 using Timberborn.EntityPanelSystem;
-using Timberborn.InputSystem;
 using Timberborn.Localization;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -20,7 +18,7 @@ namespace FrostyMods.ShamingWheel
         private Button _button;
         private ShameableWorker _worker;
 
-        public ShameButtonFragment(VisualElementLoader visualElementLoader, ILoc loc, DevModeManager devModeManager, InputService inputService)
+        public ShameButtonFragment(VisualElementLoader visualElementLoader, ILoc loc)
         {
             _visualElementLoader = visualElementLoader;
             _loc = loc;

@@ -2,8 +2,19 @@
 using System.Reflection;
 using HarmonyLib;
 
-namespace FrostyMods.NightLight
+namespace FrostyMods.NightLight.Lighting
 {
+    // The original DayStage enum is internal
+    // so we're defining our own here since it's
+    // just a basic enum and we use it frequently
+    public enum DayStage
+    {
+        Sunrise,
+        Day,
+        Sunset,
+        Night
+    }
+
     [HarmonyPatch]
     public class DayStageColorsPatch
     {

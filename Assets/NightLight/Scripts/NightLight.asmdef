@@ -12,13 +12,7 @@
         "Bindito.Unity.dll",
         "0Harmony.dll",
         "TimberApi.dll",
-        "TimberApi.Core.dll",
-        "TimberApi.Common.dll",
-        "Timberborn.TimeSystem.dll",
-        "System.Collections.Immutable.dll",
-        "Timberborn.SkySystem.dll",
-        "Timberborn.SingletonSystem.dll",
-        "Timberborn.GameUI.dll"
+        "Timberborn.SkySystem.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
