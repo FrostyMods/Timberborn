@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StagingPaths:
   - <ManifestPluginStaging>
-  Author: Frost
+  Author: FrostyMods
   Name: ShamingWheel
-  Description: Shame. Shame. Shame.
+  Description: 
   Version: 1.0.0
   Dependencies: []
 --- !u!114 &-1800585617083543040
