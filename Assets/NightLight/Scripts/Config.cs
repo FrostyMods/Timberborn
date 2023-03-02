@@ -1,10 +1,10 @@
 ﻿using System;
-using FrostyMods.NightLight;
+using FrostyMods.NightLight.Lighting;
 using TimberApi.ConfigSystem;
 
-namespace FrostMods.NightLight
+namespace FrostMods.NightLight.Config
 {
-    public class NightLightConfig : IConfig
+    public class LightingConfig : IConfig
     {
         public string ConfigFileName => "LightingConfig";
 
@@ -13,7 +13,7 @@ namespace FrostMods.NightLight
         public DayStage Sunset { get; set; }
         public DayStage Night { get; set; }
 
-        public NightLightConfig()
+        public LightingConfig()
         {
             Sunrise = DayStage.Sunrise;
             Day = DayStage.Day;
